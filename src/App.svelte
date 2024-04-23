@@ -48,7 +48,6 @@
   let room = "";
   let chatOn=0;
   function entryStart(){
-    chatOn=1;
     const container = document.querySelectorAll('.container')[0];
     const it = document.querySelectorAll('.entry')[0];
     const input = document.querySelectorAll('.entryUser')[0];
@@ -58,8 +57,8 @@
     }
     localStorage.setItem('user',input.value);
     it.style.display = "none";
-    console.log(chatOn);
-  }
+    chatOn=1;
+    }
 </script>
 
 <main>
