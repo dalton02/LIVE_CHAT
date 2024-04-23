@@ -3,7 +3,7 @@
   import {io} from 'socket.io-client';
 
   
-  const ENDPOINT = 'http://localhost:4000';
+  const ENDPOINT = 'http://100.20.92.101:4000';
   const SOCKET = io(ENDPOINT);
   
   SOCKET.on('connect',()=>{
