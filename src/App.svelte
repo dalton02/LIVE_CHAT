@@ -4,7 +4,9 @@
 
   
   const ENDPOINT = 'https://api-chat-kh2w.onrender.com';
-  const SOCKET = io(ENDPOINT);
+  const SOCKET = io(ENDPOINT, {
+  withCredentials: true,
+  });
   console.log("teste");
   SOCKET.on('connect',()=>{
     console.log("You are connect in: ",SOCKET.id);
