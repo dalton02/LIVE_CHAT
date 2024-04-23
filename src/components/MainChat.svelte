@@ -16,7 +16,7 @@ function handleClick() {
 <div class="container">
 
     <div class="header">
-    ShareCariri
+    Live Cariri
     </div>
     <div class="mainChat">
       {#each mensagens as m}
@@ -36,7 +36,7 @@ function handleClick() {
     <div class="inputChat">
     
       <input type="text" class="mm" required/>
-      <input type="submit" value="L" on:click={handleClick}/>
+      <input type="submit" value="SEND" on:click={handleClick}/>
     
     </div>
 </div>
@@ -53,7 +53,7 @@ function handleClick() {
     height: 600px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: #3C4856;
+    background-color: #F3FCEF;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -62,8 +62,9 @@ function handleClick() {
   }
   .header{
     width: 100%;
-    height: 10%;
-    font-size: 1.5rem;
+    height: 12%;
+    font-family: 'Font1';
+    font-size: 4rem;
     background-color: #005186;
     color: white;
     font-weight: 700;
@@ -79,6 +80,8 @@ function handleClick() {
     display: flex;
     flex-direction: column;
     gap:10px;
+    border-top: 2px solid black;
+    border-bottom:2px solid black;
   }
   
   /* ===== Scrollbar CSS ===== */
@@ -119,22 +122,33 @@ function handleClick() {
     width: 80%;
     height: 100%;
     border: none;
+    font-family: 'Font2';
+    font-size: 1.5rem;
+  }
+
+  .inputChat input[type='text']:focus{
+    outline: none;
+    border: none;
   }
   .inputChat input[type='submit']{
     background: white;
     color:black;
     cursor: pointer;
     width: 20%;
+    font-family: 'Font3';
+    font-size: 2rem;
   }
   .right{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-right: 5px;
   }
   .left{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin-left: 5px;
   }
 
 

@@ -25,18 +25,20 @@
     border-radius: 40px;
     background: #00669E;
     color:white;
-    padding: 8px;
-    font-family: 'Monospace';
+    padding: 6px;
+    font-family: 'Font2';
     overflow: hidden;
     display:flex;
     flex-direction: column;
     position: relative;
+    margin-top: 5px;
   }
   .header{
-    font-size:.8rem;
+    font-size:1.1rem;
     display: flex;
     justify-content: flex-start;
     text-indent: 20px;
+    color:white;
   }
   .body{
     width: 90%;

@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face{
+  src: url('./lib/Sugar Cream.otf');
+  font-family: 'Font1';
+}
+@font-face{
+  src: url('./lib/Louis George Cafe.ttf');
+  font-family: 'Font2';
+}
+@font-face{
+  src: url('./lib/Louis George Cafe Light.ttf');
+  font-family: 'Font3';
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -21,8 +35,9 @@ body {
   min-width: 320px;
   min-height: 100vh;background-color: #0B0B0B;
   opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0B0B0B 25px ), repeating-linear-gradient( #16161655, #161616 );
-  color:black;
+  background: rgb(4,4,4);
+  background: linear-gradient(180deg, rgba(4,4,4,1) 0%, rgba(4,4,4,1) 60%, rgba(1,25,37,1) 87%, rgba(6,25,34,1) 100%);
+  color: black;
 }
 
 h1 {

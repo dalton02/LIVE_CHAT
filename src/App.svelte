@@ -1,6 +1,5 @@
 <script>
   import MainChat from './components/MainChat.svelte';
-    import { onMount } from 'svelte';
   import {io} from 'socket.io-client';
  
   
@@ -15,9 +14,9 @@
   });
 
   function sendMessage(){
-
+    const t = document.querySelector('.mm').value;
     const mensagem = {
-      text: document.querySelector('.mm').value,
+      text: t,
       name: localStorage.getItem('user'),
       room: room,
       id: SOCKET.id,
@@ -28,9 +27,9 @@
     }
 
     SOCKET.emit("send-message", mensagem);
-
     const x = document.querySelectorAll('.mainChat')[0];
-    x.scrollTo(0, x.scrollHeight);
+    x.scrollTo(0, x.scrollHeight);    
+    document.querySelector('.mm').value = "";
   }
 
 
@@ -57,10 +56,6 @@
     it.style.display = "none";
     console.log(chatOn);
   }
-  onMount(() => {
-        // Se chatOn mudar, imprima o novo valor no console
-        $: console.log('chatOn mudou para:', chatOn);
-    });
 </script>
 
 <main>
