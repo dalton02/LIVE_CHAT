@@ -3,9 +3,9 @@
   import {io} from 'socket.io-client';
 
   
-  const ENDPOINT = 'http://100.20.92.101:4000';
+  const ENDPOINT = 'https://api-chat-kh2w.onrender.com';
   const SOCKET = io(ENDPOINT);
-  
+  console.log("teste");
   SOCKET.on('connect',()=>{
     console.log("You are connect in: ",SOCKET.id);
     SOCKET.id = SOCKET.id;
