@@ -205,6 +205,7 @@ CHAT API
     border-radius: 10px;
     border: 2px solid black;
     background: white;
+    color:black;
     cursor: pointer;
   }
   .right{
