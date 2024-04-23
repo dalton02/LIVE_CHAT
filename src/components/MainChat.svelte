@@ -52,7 +52,7 @@ function handleClick() {
     width: 500px;
     height: 600px;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #F3FCEF;
     overflow: hidden;
     display: flex;

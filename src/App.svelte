@@ -11,6 +11,10 @@
   SOCKET.on('connect',()=>{
     console.log("You are connect in: ",SOCKET.id);
     SOCKET.id = SOCKET.id;
+    const container = document.querySelectorAll('.entry')[0];
+    const aviso = document.querySelectorAll('.headsUp')[0];
+    aviso.style.display = "none";
+    container.style.display = "flex";
   });
 
   function sendMessage(){
@@ -61,6 +65,11 @@
 <main>
 
 
+<div class="headsUp">
+<h1>Waiting for server to startup....</h1>
+Please be pacient
+</div>
+
 <div class="entry">
 
   <div class="entryHeader">
@@ -79,6 +88,12 @@
 </main>
 
 <style>
+.headsUp{
+  font-size:1rem;
+  width:100%;
+  height:100%;
+  color:white;
+}
 
   .entry{
     width: 400px;
@@ -95,6 +110,7 @@
     padding: 10px;
     box-shadow: 10px 10px 0px 5px black;
     font-family: "Comic Neue", bold;
+    display: none;
   }
   .entryHeader{
     font-size: 2rem;
