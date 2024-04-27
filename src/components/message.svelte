@@ -20,7 +20,7 @@
 
 <style>
   .message{
-    width:200px;
+    width:280px;
     height: auto;
     border-radius: 40px;
     background: #00669E;

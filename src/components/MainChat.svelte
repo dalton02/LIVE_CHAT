@@ -16,7 +16,7 @@ function handleClick() {
 <div class="container">
 
     <div class="header">
-    Live Cariri
+    LIVE CHAT
     </div>
     <div class="mainChat">
       {#each mensagens as m}
@@ -49,8 +49,8 @@ function handleClick() {
 
 
 .container{
-    width: 500px;
-    height: 600px;
+    width: 650px;
+    height: 550px;
     border: 2px solid black;
     border-radius: 30px;
     background-color: #F3FCEF;
@@ -63,8 +63,8 @@ function handleClick() {
   .header{
     width: 100%;
     height: 12%;
-    font-family: 'Font1';
-    font-size: 4rem;
+    font-family: 'Font2';
+    font-size: 3rem;
     background-color: #005186;
     color: white;
     font-weight: 700;
@@ -80,8 +80,6 @@ function handleClick() {
     display: flex;
     flex-direction: column;
     gap:10px;
-    border-top: 2px solid black;
-    border-bottom:2px solid black;
   }
   
   /* ===== Scrollbar CSS ===== */
@@ -113,15 +111,17 @@ function handleClick() {
   }
   .inputChat{
     width: 100%;
-    background-color: black;
     height: 12%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
   }
   .inputChat input[type='text']{
     width: 80%;
-    height: 100%;
+    height: 50%;
     border: none;
+    border-radius: 50px;
     font-family: 'Font2';
     font-size: 1.5rem;
   }
@@ -134,9 +134,14 @@ function handleClick() {
     background: white;
     color:black;
     cursor: pointer;
-    width: 20%;
-    font-family: 'Font3';
-    font-size: 2rem;
+    width: 15%;
+    font-family: 'Font2';
+    font-size: 1.3rem;
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #00669E;
   }
   .right{
     display: flex;
