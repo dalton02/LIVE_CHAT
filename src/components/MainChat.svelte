@@ -23,7 +23,7 @@ function handleClick() {
       {#each mensagens as m}
       {#if m.id==id}
       <div class="right">
-      <Message message={m.text} user="Você"/>
+      <Message message={m.text} user="You"/>
       </div>
       {:else}
       <div class="left">
