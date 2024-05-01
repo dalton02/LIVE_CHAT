@@ -7,7 +7,6 @@
   const SOCKET = io(ENDPOINT, {
   withCredentials: true,
   });
-  console.log("teste");
   SOCKET.on('connect',()=>{
     console.log("You are connect in: ",SOCKET.id);
     SOCKET.id = SOCKET.id;
@@ -26,7 +25,7 @@
       id: SOCKET.id,
     }
     if(mensagem.text.length < 2){
-      alert('Caracteres insuficientes');
+      alert('Message not long enough');
       return;
     }
 
@@ -52,7 +51,7 @@
     const it = document.querySelectorAll('.entry')[0];
     const input = document.querySelectorAll('.entryUser')[0];
     if(input.value.length<4){
-      alert('Seu usuario precisa de pelo menos 4 caracteres');
+      alert('Your user needs to have at least 4 letters');
       return;
     }
     localStorage.setItem('user',input.value);
@@ -72,12 +71,13 @@ Please be pacient
 <div class="entry">
 
   <div class="entryHeader">
-  Seu usuário
+  Your user
   </div>
   
   <div class="inputEntry">
   <input type="text" class="entryUser" required/>
-  <input type="submit" value="OK" on:click={entryStart}/>
+  <input type="submit" value="Enter chat
+" on:click={entryStart}/>
   </div>
    
 </div>

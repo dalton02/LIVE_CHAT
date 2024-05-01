@@ -2,6 +2,7 @@
 
 import { createEventDispatcher } from 'svelte';
 import Message from './message.svelte';
+import Paper from '../assets/paper.svg';
 
 export let mensagens;
 export let id;
@@ -35,9 +36,10 @@ function handleClick() {
     
     <div class="inputChat">
     
-      <input type="text" class="mm" required/>
-      <input type="submit" value="SEND" on:click={handleClick}/>
-    
+      <input type="text" placeholder="Type here" class="mm" required/>
+      <button on:click={handleClick}>
+        <img src={Paper}>
+      </button>
     </div>
 </div>
 
@@ -49,22 +51,22 @@ function handleClick() {
 
 
 .container{
-    width: 650px;
-    height: 550px;
+    width: 500px;
+    height: 600px;
     border: 2px solid black;
     border-radius: 30px;
     background-color: #F3FCEF;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-family: "Comic Neue", bold;
-    
-  }
+      }
   .header{
     width: 100%;
-    height: 12%;
+    height: 10%;
     font-family: 'Font2';
-    font-size: 3rem;
+    font-size: 2.8rem;
     background-color: #005186;
     color: white;
     font-weight: 700;
@@ -79,7 +81,7 @@ function handleClick() {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap:12px;
   }
   
   /* ===== Scrollbar CSS ===== */
@@ -111,37 +113,47 @@ function handleClick() {
   }
   .inputChat{
     width: 100%;
-    height: 12%;
+    height: 7%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap:6px;
     align-items: center;
     align-content: center;
+    position: relative;
+    padding: 6px;
+    padding-left: 3px;
   }
   .inputChat input[type='text']{
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     border: none;
     border-radius: 50px;
     font-family: 'Font2';
     font-size: 1.5rem;
+    text-indent: 20px;
+    background-color: rgba(0,0,0,.2);
   }
 
   .inputChat input[type='text']:focus{
     outline: none;
     border: none;
   }
-  .inputChat input[type='submit']{
+  .inputChat button{
     background: white;
     color:black;
     cursor: pointer;
-    width: 15%;
+    height: 100%;
     font-family: 'Font2';
-    font-size: 1.3rem;
-    font-weight: 900;
-    padding: 10px;
-    border-radius: 50px;
+    border-radius: 100%;
+    aspect-ratio: 10/10;
     border: none;
+    position: relative;
     background-color: #00669E;
+    margin-right: 10px;
+  }
+  .inputChat img{
+    max-width: 76%;
+    max-height: 76%;
   }
   .right{
     display: flex;
