@@ -17,13 +17,16 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;background-color: #0B0B0B;
+  align-items: center;
+  
+  min-height: 100vh;
+  background-color: #0B0B0B;
   opacity: 1;
   background: rgb(4,4,4);
   background: linear-gradient(180deg, rgba(4,4,4,1) 0%, rgba(4,4,4,1) 60%, rgba(1,25,37,1) 87%, rgba(6,25,34,1) 100%);
   color: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1 {

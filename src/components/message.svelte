@@ -35,7 +35,7 @@
 
 <style>
   .message{
-    min-width: 30%;
+    min-width: 25%;
     max-width: 60%;
     height: auto;
     border-radius: 40px;
@@ -73,6 +73,17 @@
     top: 8px;
     right: 25px;
     font-size: .8rem;
+  }
+
+  @media only screen and (max-width:600px){
+   .message{
+    min-width: 40%;
+   } 
+  }
+  @media only screen and (max-width:400px){
+   .message{
+    min-width: 50%;
+   } 
   }
 
 </style>

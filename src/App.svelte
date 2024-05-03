@@ -60,9 +60,7 @@
     }
 </script>
 
-<main>
-
-
+<div class="general">
 <div class="headsUp">
 <h1>Waiting for server to startup....</h1>
 Please be pacient
@@ -81,17 +79,32 @@ Please be pacient
   </div>
    
 </div>
+
 {#if chatOn>0}
   <MainChat mensagens={mensagens} id={SOCKET.id} on:send-message={sendMessage}/>
-   {/if}
-</main>
-
+ {/if}
+</div>
 <style>
+  .general{
+    width: 100vw;
+    height: 100dvh;
+    max-height: 1000px;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 .headsUp{
   font-size:1rem;
   width:100%;
   height:100%;
   color:white;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
 }
 
   .entry{

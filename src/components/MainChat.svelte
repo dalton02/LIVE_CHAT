@@ -38,7 +38,7 @@ function handleClick() {
     
       <input type="text" placeholder="Type here" class="mm" required/>
       <button on:click={handleClick}>
-        <img src={Paper}>
+        <img src={Paper}/>
       </button>
     </div>
 </div>
@@ -51,20 +51,20 @@ function handleClick() {
 
 
 .container{
-    width: 500px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     border: 2px solid black;
-    border-radius: 30px;
     background-color: #F3FCEF;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-family: "Comic Neue", bold;
+    position: relative;
       }
   .header{
     width: 100%;
-    height: 10%;
+    height: 11%;
     font-family: 'Font2';
     font-size: 2.8rem;
     background-color: #005186;
@@ -77,7 +77,7 @@ function handleClick() {
   }
   .mainChat{
     width: 99.9%;
-    height: 80%;
+    height: 86%;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -114,13 +114,14 @@ function handleClick() {
   .inputChat{
     width: 100%;
     height: 7%;
+    position: relative;
     display: flex;
     justify-content: center;
     gap:6px;
     align-items: center;
     align-content: center;
     position: relative;
-    padding: 6px;
+    padding: 9px;
     padding-left: 3px;
   }
   .inputChat input[type='text']{
@@ -142,18 +143,21 @@ function handleClick() {
     background: white;
     color:black;
     cursor: pointer;
-    height: 100%;
+    position: relative;
     font-family: 'Font2';
     border-radius: 100%;
-    aspect-ratio: 10/10;
+    aspect-ratio: 1/1;
+    width: 50px;
     border: none;
-    position: relative;
-    background-color: #00669E;
     margin-right: 10px;
+    background-color: #00669E;
+
   }
   .inputChat img{
-    max-width: 76%;
-    max-height: 76%;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    position: relative;
   }
   .right{
     display: flex;
@@ -167,6 +171,15 @@ function handleClick() {
     justify-content: flex-start;
     margin-left: 5px;
   }
-
+  @media only screen and (max-width:600px){
+    .inputChat button{
+      width: 50px;
+    }
+  .inputChat{
+    gap: 0px;
+    padding: 3px;
+    padding-left: 0px;
+  }
+  }
 
 </style>
