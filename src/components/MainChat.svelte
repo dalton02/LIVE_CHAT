@@ -53,6 +53,8 @@ function handleClick() {
 .container{
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     border: 2px solid black;
     background-color: #F3FCEF;
     overflow: hidden;

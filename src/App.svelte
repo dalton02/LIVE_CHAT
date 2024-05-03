@@ -88,7 +88,6 @@ Please be pacient
   .general{
     width: 100vw;
     height: 100dvh;
-    max-height: 1000px;
     max-width: 1600px;
     display: flex;
     flex-direction: column;
